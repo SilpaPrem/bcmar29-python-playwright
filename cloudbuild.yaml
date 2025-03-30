@@ -3,8 +3,8 @@ steps:
     id: 'Install and Run Tests'
     entrypoint: 'sh'
     args:
+      - '-c'
       - |
-        -'-c'
         pip install -r requirements.txt
         python -m playwright install --with-deps chromium
         pytest --html=reports/index.html
